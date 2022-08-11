@@ -2,12 +2,15 @@
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { crearNuevoProductoAction } from '../actions/productoActions'
+import { useNavigate } from 'react-router-dom'
 
-export const NewProduct = ({ history }) => {	
+export const NewProduct = () => {	
 
 	// State del componente
 	const [ name, setName ] = useState('')
 	const [ price, setPrice ] = useState(0)
+
+	const navigate = useNavigate()
 
 	// Utilizar useDispatch y te crea una función
 	const dispatch = useDispatch()
@@ -34,7 +37,7 @@ export const NewProduct = ({ history }) => {
 		agregarProducto({ nombre: name, precio: price })
 
 		// Redireccionar
-		history.push('/')
+		navigate('/')
 	}	
 
 

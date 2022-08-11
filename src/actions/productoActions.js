@@ -6,7 +6,10 @@ import {
     AGREGAR_PRODUCTO_ERROR,
     COMENZAR_DESCARGA_PRODUCTOS,
     DESCARGA_PRODUCTOS_EXITO,
-    DESCARGA_PRODUCTOS_ERROR
+    DESCARGA_PRODUCTOS_ERROR,
+    OBTENER_PRODUCTO_ELIMINAR,
+    PRODUCTO_ELIMINADO_EXITO,
+    PRODUCTO_ELIMINADO_ERROR
 } from '../types'
 import Swat from 'sweetalert2';
 
@@ -65,7 +68,6 @@ export function obtenerProductosAction() {
             const { data } = await clienteAxios('/productos')
             dispatch(descargaProductosExitosa(data))
         } catch (error) {
-            console.log(error)
             dispatch(descargaProductosError())
         }
     }
@@ -83,5 +85,42 @@ const descargaProductosExitosa = (productos) => ({
 
 const descargaProductosError = () => ({
     type: DESCARGA_PRODUCTOS_ERROR,
+    payload: true
+})
+
+// Selecciona y elimina el producto
+export function borrarProductoAction(id) {
+    return async (dispatch) => {
+        dispatch(obtenerProductoEliminar(id))
+        try {
+            await clienteAxios.delete(`/productos/${id}`)
+            dispatch(productoEliminadoExito())
+            Swat.fire({
+                title: 'Eliminado',
+                text: 'Registro eliminado correctamente',
+                icon: 'success',
+            })
+        } catch (error) {
+            dispatch(productoEliminadoError())
+            Swat.fire({
+                title: 'Error',
+                text: 'Hubo un error, intenta de nuevo',
+                icon: 'error'
+            })
+        }
+    }
+}
+
+const obtenerProductoEliminar = (id) => ({
+    type: OBTENER_PRODUCTO_ELIMINAR,
+    payload: id
+})
+
+const productoEliminadoExito = () => ({
+    type: PRODUCTO_ELIMINADO_EXITO
+})
+
+const productoEliminadoError = () => ({
+    type: PRODUCTO_ELIMINADO_ERROR,
     payload: true
 })
