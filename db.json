@@ -26,18 +26,18 @@
       "id": 5
     },
     {
-      "name": "Mazapán",
-      "price": 5,
+      "nombre": "Mazapán",
+      "precio": 5,
       "id": 6
     },
     {
-      "name": "Pulparindo",
-      "price": 2,
+      "nombre": "Pulparindo",
+      "precio": 2,
       "id": 7
     },
     {
-      "name": "Juego de Piña",
-      "price": 40,
+      "nombre": "Juego de Piña",
+      "precio": 40,
       "id": 8
     }
   ]

@@ -31,7 +31,7 @@ export const NewProduct = ({ history }) => {
 		// Si no hay errores
 
 		// Crear nuevo producto
-		agregarProducto({ name, price})
+		agregarProducto({ nombre: name, precio: price })
 
 		// Redireccionar
 		history.push('/')
