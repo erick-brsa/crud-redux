@@ -4,3 +4,4 @@ import productosReducer from './productosReducer'
 export default combineReducers({
     productos: productosReducer
 })
+

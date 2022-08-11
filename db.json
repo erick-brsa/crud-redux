@@ -1,29 +1,44 @@
 {
-    "productos": [
-      {
-        "id": 1,
-        "nombre": "Jugo de Zanahoria",
-        "precio": "31111"
-      },
-      {
-        "id": 2,
-        "nombre": "Jugo de Naranja",
-        "precio": "1"
-      },
-      {
-        "nombre": "Jugo de Naranja",
-        "precio": "300",
-        "id": 3
-      },
-      {
-        "nombre": "Rib Eye 800g",
-        "precio": "200",
-        "id": 4
-      },
-      {
-        "nombre": "Jugo de Fresa",
-        "precio": "200",
-        "id": 5
-      }
-    ]
-  }
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Jugo de Zanahoria",
+      "precio": "31111"
+    },
+    {
+      "id": 2,
+      "nombre": "Jugo de Naranja",
+      "precio": "1"
+    },
+    {
+      "nombre": "Jugo de Naranja",
+      "precio": "300",
+      "id": 3
+    },
+    {
+      "nombre": "Rib Eye 800g",
+      "precio": "200",
+      "id": 4
+    },
+    {
+      "nombre": "Jugo de Fresa",
+      "precio": "200",
+      "id": 5
+    },
+    {
+      "name": "Mazapán",
+      "price": 5,
+      "id": 6
+    },
+    {
+      "name": "Pulparindo",
+      "price": 2,
+      "id": 7
+    },
+    {
+      "name": "Juego de Piña",
+      "price": 40,
+      "id": 8
+    }
+  ]
+}
