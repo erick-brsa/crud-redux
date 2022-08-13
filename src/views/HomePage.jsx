@@ -35,10 +35,10 @@ export const HomePage = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {productos.length > 0 && (
-                            productos.map(producto => (
+                        {productos && productos.length > 0 && (
+                            productos.map((producto, index) => (
                                 <Producto 
-                                    key={producto.id}
+                                    key={index}
                                     producto={producto}
                                 />
                             ))
