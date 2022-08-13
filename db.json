@@ -1,3 +1,19 @@
 {
-  "productos": []
+  "productos": [
+    {
+      "nombre": "Pulparindo",
+      "precio": "4",
+      "id": 2
+    },
+    {
+      "nombre": "Mazapán",
+      "precio": 5,
+      "id": 3
+    },
+    {
+      "nombre": "Picafresa",
+      "precio": "2",
+      "id": 4
+    }
+  ]
 }

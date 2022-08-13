@@ -35,7 +35,7 @@ export const HomePage = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {productos.length === 0 ? 'No hay productos' : (
+                        {productos.length > 0 && (
                             productos.map(producto => (
                                 <Producto 
                                     key={producto.id}
